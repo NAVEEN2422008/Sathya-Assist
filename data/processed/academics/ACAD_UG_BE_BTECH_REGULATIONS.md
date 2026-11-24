@@ -1,16 +1,11 @@
----
-document_id: "ACAD_UG_BE_BTECH_REGULATIONS"
-source_title: "Official Academic Regulations for Undergraduate B.E. / B.Tech Programmes"
-source_url: "https://www.sathyabama.ac.in/sites/default/files/2023-04/ACADEMIC%20REGULATION%20UG%20B.E.B.TECH_.pdf"
-access_timestamp: "2026-11-24T16:51:52.461539+00:00"
-applicable_academic_year: "2026-2027"
-category: "academics"
-official_contact_office: "Dean Academics & Academic Council"
-sha256_hash: "84730619e59646451942dbd7ea431a6ae7f02aad733d36df204bbf464bfbc3c7"
----
-
-### Page 1
-
+<!--
+Metadata:
+  Document ID: ACAD_UG_BE_BTECH_REGULATIONS
+  Category: Academics
+  Department: UG
+  Academic Year: BE
+  Publication Date: None
+-->
 
 SATHYABAMA                                                 
                                                                                   
@@ -50,43 +45,34 @@ SATHYABAMA
                  UNDERGRADUATE        DEGREE    PROGRAMMES                        
                                                                                   
                                                                                   
-                           B.E./ B.Tech. – (Four Years)
+                           B.E./ B.Tech. – (Four Years)                           
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
 
-### Page 2
-
-
-| Sl. No. | Title | Page No. |
-| --- | --- | --- |
-|  | Preamble | 3 |
-|  | Definitions and Nomenclature | 3 |
-| 1 | Vision and Mission | 5 |
-| 2 | Admission | 5 |
-| 3 | Student Discipline | 6 |
-| 4 | Structure of Programme | 6 |
-| 5 | Duration of the Programme | 8 |
-| 6 | Requirements for Completion of a Semester | 8 |
-| 7 | Elective Courses | 8 |
-| 8 | Course Coordinator for Each Course | 8 |
-| 9 | Academics | 9 |
-| 10 | Choice Based Credit System | 11 |
-| 11 | Non Credit Courses | 12 |
-| 12 | Opportunity to Gain Exposure Outside the Institution | 12 |
-| 13 | Maximum Duration | 13 |
-| 14 | Examinations and Assessment | 13 |
-| 15 | Passing Requirements | 17 |
-| 16 | Award of Degree | 18 |
-| 17 | Grade Sheet | 19 |
-| 18 | Eligibility for the Award of Degree | 19 |
-| 19 | Classification of Degree Awarded | 20 |
-| 20 | Withdrawal from Examinations | 21 |
-| 21 | Authorized Break of Study | 21 |
-| 22 | Professional Training | 22 |
-| 23 | Declaration of Results | 23 |
-| 24 | Examination Review Committee / Unfair Means Committee | 23 |
-| 25 | Revision of Regulations / Power to Modify | 23 |
-
-
-TABLE OF CONTENTS                                 
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                TABLE OF CONTENTS                                 
                                                                                   
              Sl.                     Title                       Page             
             No.                                                   No.             
@@ -143,12 +129,15 @@ TABLE OF CONTENTS
                                                                                   
                                                                                   
                                                                                   
-                                        2
+                                        2                                         
 
-### Page 3
-
-
-I. PREAMBLE                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                     I. PREAMBLE                                  
                                                                                   
           As per the recommendations of UGC, the Sathyabama Institute of Science and
                                                                                   
@@ -205,12 +194,14 @@ I. PREAMBLE
           Batch Coordinator / Year Coordinator: The Head of the Department shall appoint a
           Batch coordinator for each batch of students admitted in to a programme, throughout
                                                                                   
-                                        3
+                                        3                                         
 
-### Page 4
-
-
-their period of study. The Batch coordinator shall act as a linkage between the HoD,
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+          their period of study. The Batch coordinator shall act as a linkage between the HoD,
                                                                                   
           faculty members and the students.                                       
                                                                                   
@@ -268,25 +259,15 @@ their period of study. The Batch coordinator shall act as a linkage between the 
                                                                                   
                                                                                   
                                                                                   
-                                        4
+                                        4                                         
 
-### Page 5
-
-
-| 1.1 Vision: Be a leading multidisciplinary University, |
-| --- |
-| producing world class talents to address global challenges |
-
-
-|  To attain excellence in Education and Research through effective collaboration with |
-| --- |
-| Industries and other International/National organisations |
-|  To consistently remain an attractive ecosystem for students and employees, a hub |
-| of innovation for researchers and an incubating platform for entrepreneurs |
-|  To create an inclusive environment that caters to all forms of diversity |
-
-
-Academic Regulations                              
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                Academic Regulations                              
                                                                                   
                                                                                   
                          Under Choice Based Credit System (CBCS)                  
@@ -343,12 +324,16 @@ Academic Regulations
                                                                                   
                  the Institute shall be final.                                    
                                                                                   
-                                        5
+                                        5                                         
 
-### Page 6
-
-
-2.5 At any time after admission, if found that a candidate has not
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                    2.5 At any time after admission, if found that a candidate has not
                        fulfilled one or many of the requirements stipulated by the Institute,
                                                                                   
                        or submitted forged certificates, the Institute has the right to revoke
@@ -404,12 +389,15 @@ Academic Regulations
                                                                                   
                                                                                   
                                                                                   
-                                        6
+                                        6                                         
 
-### Page 7
-
-
-(iii) Electives offered by the School and the Department related to the
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+               (iii) Electives offered by the School and the Department related to the
                     Major programme of study.                                     
                                                                                   
                (iv) Common Electives to be chosen from Professional elective courses
@@ -466,12 +454,17 @@ Academic Regulations
                                                                                   
                                                                                   
                                                                                   
-                                        7
+                                        7                                         
 
-### Page 8
-
-
-5. Duration of the Programme:                                         
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+            5. Duration of the Programme:                                         
                                                                                   
                     A  student is normally expected to complete the B.E/B.Tech.   
                Programme in 8 semesters but in any case not more than 12 consecutive
@@ -527,12 +520,14 @@ Academic Regulations
                   communicated to the students periodically.                      
                                                                                 
                   The involvement of students in course based projects and assignments.
-                                        8
+                                        8                                         
 
-### Page 9
-
-
-                                                                
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                
                   To prepare common question paper for continuous assessment exams.
                                                                                   
                                                                                 
@@ -590,12 +585,16 @@ Academic Regulations
                                                                                   
           entrepreneurship skills.                                                
                                                                                   
-                                        9
+                                        9                                         
 
-### Page 10
-
-
-Flexible subject system has been imposed from 2015 regulations and this
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+               Flexible subject system has been imposed from 2015 regulations and this
           enables choice based staff selection (CBSS) where students are encouraged to
           select staff members of their choice for                                
                                                                                   
@@ -651,12 +650,14 @@ Flexible subject system has been imposed from 2015 regulations and this
                                                                                   
             j) Student who avails on duty has to take prior permission from the department
                                                                                   
-                                        10
+                                        10                                        
 
-### Page 11
-
-
-head and the necessary documents have to be submitted to mentor/ counselor
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+            head and the necessary documents have to be submitted to mentor/ counselor
                                                                                   
             after attending the event. Students (I, II, III years) shall avail at the maximum of six
             days ON DUTY in a semester for academic purpose.                      
@@ -714,24 +715,15 @@ head and the necessary documents have to be submitted to mentor/ counselor
                                                                                   
                                                                                   
                                                                                   
-                                        11
+                                        11                                        
 
-### Page 12
-
-
-| Semester | Total No. of Theory Courses | No. of Mandatory Courses | No of CBCS/ Professional / Open Elective Courses | Total Credits of Mandatory Courses | Total Credits of CBCS/ Professional/ Open Elective Cours es | Total Credits Accrued |
-| --- | --- | --- | --- | --- | --- | --- |
-| 1 | 6 | 6 | - | 16 | - | 16 |
-| 2 | 6 | 6 | - | 19 | - | 19 |
-| 3 | 6 | 4 | 2 | 12 | 6 | 18 |
-| 4 | 6 | 4 | 2 | 12 | 5 | 17 |
-| 5 | 6 | 3 | 3 | 9 | 9 | 18 |
-| 6 | 5 | 2 | 3 | 6 | 9 | 15 |
-| 7 | 5 | 2 | 3 | 6 | 9 | 15 |
-| 8 | 2 | 1 | 1 | 3 | 3 | 6 |
-
-
-10. Choice Based Credit System:                                         
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+          10. Choice Based Credit System:                                         
                Students are allowed to accumulate credits through a Fully Flexible Credit
                                                                                   
           System – Choice Based Credit System (CBCS). The students are given the liberty
@@ -788,16 +780,14 @@ head and the necessary documents have to be submitted to mentor/ counselor
              7        5         2         3         6         9        15         
              8        2         1         1         3         3        6          
                                                                                   
-                                        12
+                                        12                                        
 
-### Page 13
-
-
-| Overall Total | 42 | 28 | 14 | 83 | 41 | 12 4 |
-| --- | --- | --- | --- | --- | --- | --- |
-
-
-Overall   42        28        14        83         41       12         
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+           Overall   42        28        14        83         41       12         
                                                                        4          
             Total                                                                 
                                                                                   
@@ -855,23 +845,15 @@ Overall   42        28        14        83         41       12
                                                                                   
                                                                                   
                                                                                   
-                                        13
+                                        13                                        
 
-### Page 14
-
-
-| Sno | Title | Credits Allotte d | Total Credit s |
-| --- | --- | --- | --- |
-| 1 | Credits from Mandatory Courses | 83 |  |
-| 2 | Credits from CBCS/ Professional/ Open Electives | 41 |  |
-| 3 | Total Theory Course Credits |  | 124 |
-| 4 | Laboratory Course Credits |  | 26 |
-| 5 | Project |  | 10 |
-| 6 | Professional Training / Internships |  | 5 |
-|  | Total Credit Requirements of a Programme |  | 165 |
-
-
-Credit Distribution for Various Types of Courses during the Programme   
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+          Credit Distribution for Various Types of Courses during the Programme   
                                                                                   
              Sno Title                            Credits Total                   
                                                                                   
@@ -927,12 +909,14 @@ Credit Distribution for Various Types of Courses during the Programme
                                                                                   
               This is possible only with the List of Research Organizations, Educational
                Institutions in India and abroad approved by Sathyabama Institute of
-                                        14
+                                        14                                        
 
-### Page 15
-
-
-Science And Technology.                                            
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+               Science And Technology.                                            
                                                                                   
               Astudentshouldhavegotaminimumof6CGPAwithoutanyarrearsatthetimeofap 
                                                                                   
@@ -990,12 +974,15 @@ Science And Technology.
                                                                                   
                                                                                   
                                                                                   
-                                        15
+                                        15                                        
 
-### Page 16
-
-
-  The student can have the option of spending not more than three to Six
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+              The student can have the option of spending not more than three to Six
                                                                                   
                months in the Final year or Pre-final year of his/her Degree. During this
                period, the student can do his/her Project work or register for courses which
@@ -1052,39 +1039,15 @@ Science And Technology.
                the internal assessment (Mid Semester) tests conducted and assignments
                submitted. The evaluation scheme of the institution is as follows: 
                                                                                   
-                                        16
+                                        16                                        
 
-### Page 17
-
-
-| Cours e Type | Cumulative Internal Examinations (CIE) (Max.50) |  |  |  |  |  |  |  |  |  | End Semester Examinations(ES E) (Max.50) |  |  |  |  |  |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-|  | Continuo us Assessme nt Examinations (CAE) |  |  |  | Assignments(100) |  |  |  |  |  |  |  |  |  |  |  |
-|  | CAE1(50) |  | CAE2(50 ) |  |  |  |  |  |  |  |  |  |  |  |  |  |
-|  | CO1 | CO 2 | C O 3 | CO 4 | CO 1 | CO 2 | C O 3 | C O 4 | C O 5 | CO 6 | C O 1 | CO 2 | C O 3 | CO 4 | C O 5 | C O 6 |
-| Theory (Max10 0) | 32/ 20 | 18/ 30 | 32/ 20 | 18/ 30 | 10 | 10 | 10 | 10 | 30 | 30 | 20 | 20 | 20 | 20 | 18/ 2 | 2/ 1 8 |
-
-
-| Cours e Type | Model Practical Examinations (MPE)(Max.50) |  |  |  |  |  |  |  |  |  |  |  | End Semester Practical Examination s (ESPE)(Max. 50) |  |  |  |  |  |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-|  | Record(3 0) |  |  |  |  |  | Model(2 0) |  |  |  |  |  |  |  |  |  |  |  |
-|  | C O 1 | CO2 | CO 3 | CO4 | CO5 | CO6 | CO1 | CO2 | CO3 | CO4 | CO5 | CO 6 | CO1 | CO 2 | CO 3 | CO 4 | CO 5 | CO6 |
-| Lab (Ma x. 100 ) | 5 | 5 | 5 | 5 | 5 | 5 | 3 | 3 | 3 | 3 | 4 | 4 | 8 | 8 | 8 | 8 | 9 | 9 |
-
-
-|  | Internal(5 0) |  |  |  | External(5 0) |  |
-| --- | --- | --- | --- | --- | --- | --- |
-| Course Type | Review 1 |  | Revie w 2 | Review 3 | Viva Voce |  |
-| Proje ct Wor k (Max100 ) | CO 1 | CO2 | CO3 | CO 4 | CO5 | CO6 |
-|  | 2 | 3 | 15 | 30 | 25 | 25 |
-
-
-| Course Type | Internsh ip |  |  |  |  |  |
-| --- | --- | --- | --- | --- | --- | --- |
-|  | Thrust Area | Relevance to Program | Knowledge on Industr y Practic | Documentati on | Presentati on Skills | Deliverabl es |
-
-
-Evaluation Scheme                               
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                  Evaluation Scheme                               
                   Cumulative Internal Examinations (CIE)                          
                                (Max.50)                                           
                                                         End Semester              
@@ -1150,22 +1113,14 @@ Evaluation Scheme
                             Program                            Skills             
                                           y                                       
                                         Practic                                   
-                                        17
+                                        17                                        
 
-### Page 18
-
-
-|  |  |  |  | es |  |  |  |
-| --- | --- | --- | --- | --- | --- | --- | --- |
-| Professio nal Training 1 (Max100) | CO1 | CO 2 |  | CO3 | CO 4 | CO5 | CO6 |
-|  | 10 | 10 |  | 20 | 20 | 20 | 2 0 |
-| Professio nal Training 2 (Max100 ) | Internsh ip |  |  |  |  | Employabi lity ty Test/Competitive Examination |  |
-|  | Industry Exposure |  | Care er Focu s | Documentat ion and Presentatio n Skill s | Training Outcomes | AMCAT Exam/Higher Studie s |  |
-|  | CO 1 |  | CO2,CO 3 | CO4 | CO 5 | CO6 |  |
-|  | 10 |  | 10 | 10 | 10 | 60 |  |
-
-
-es                                      
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                          es                                      
                                                                                   
                                                                                   
                                                                                   
@@ -1223,12 +1178,15 @@ es
                                                                                   
                                                                                   
                                                                                   
-                                        18
+                                        18                                        
 
-### Page 19
-
-
-14.1   Continuous Assessment Exams                                    
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+            14.1   Continuous Assessment Exams                                    
                                                                                   
               (a) Theory Courses                                                  
                                                                                   
@@ -1285,12 +1243,14 @@ es
                   The end semester examinations shall normally be conducted between
                    October and December during the odd semesters and between April
                                                                                   
-                                        19
+                                        19                                        
 
-### Page 20
-
-
-and May during the even semesters for both theory and practical
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                   and May during the even semesters for both theory and practical
                                                                                   
                    courses of all programmes.                                     
                                                                                   
@@ -1348,12 +1308,15 @@ and May during the even semesters for both theory and practical
                                                                                   
                                                                                   
                                                                                   
-                                        20
+                                        20                                        
 
-### Page 21
-
-
- End semester examinations will be conducted for a maximum of 100
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                  End semester examinations will be conducted for a maximum of 100
                    marks. The marks secured in end semester exams will be converted to
                    50marks.                                                       
                                                                                   
@@ -1410,18 +1373,15 @@ and May during the even semesters for both theory and practical
                    members of the review committee will evaluate the progress of the
                    project and award marks.                                       
                                                                                   
-                                        21
+                                        21                                        
 
-### Page 22
-
-
-|  | PROJECT REVIEWS |  |  | FINAL PROJECT VIVA VOCE |
-| --- | --- | --- | --- | --- |
-|  | 1 | 2 | 3 |  |
-| Max. Marks | 5 | 15 | 30 (20 for review + 10 by guide) | 50 |
-
-
-PROJECT  REVIEWS            FINAL              
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                   PROJECT  REVIEWS            FINAL              
                                                              PROJECT              
                                1        2         3                               
                                                              VIVA VOCE            
@@ -1478,25 +1438,14 @@ PROJECT  REVIEWS            FINAL
                       marks out of maximum mark in end semester exams. Then he/she
                       shall be declared to have passed in the examination.        
                                                                                   
-                                        22
+                                        22                                        
 
-### Page 23
-
-
-| Range of Marks | Grad e | Grade Points (GP) |
-| --- | --- | --- |
-| 90-100 | A++ | 10 |
-| 80-89 | A+ | 9 |
-| 70-79 | B++ | 8 |
-| 60-69 | B+ | 7 |
-| 50-59 | C | 6 |
-| 00-49 (Reappear) | RA | 0 |
-| ABSENT | AAA | 0 |
-| Withdrawal | W | 0 |
-| Authorised Break of Study | ABS | 0 |
-
-
-                                                                
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                
                   If a candidate fails to secure a pass in a particular course, it is mandatory that he/she
                   shall register and reappear for the examination in that course during the
                   next semester when examination is conducted in that course. It is
@@ -1554,12 +1503,15 @@ PROJECT  REVIEWS            FINAL
                             particular semester in the case of GPA and            
                             during all the semesters in the case of CGPA          
                                                                                   
-                                        23
+                                        23                                        
 
-### Page 24
-
-
-Final Degree is awarded based on the following:                         
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+          Final Degree is awarded based on the following:                         
                                                                                   
                    CGPA ≥9.0        -  First Class -Exemplary                     
                                                                                   
@@ -1616,12 +1568,15 @@ Final Degree is awarded based on the following:
                                                                                   
                                                                                   
                                                                                   
-                                        24
+                                        24                                        
 
-### Page 25
-
-
-19. Classification of Degree Awarded:                                 
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+            19. Classification of Degree Awarded:                                 
                                                                                   
             1. A candidate who qualifies for the award of the Degree having passed the
                                                                                   
@@ -1678,12 +1633,14 @@ Final Degree is awarded based on the following:
             4. All other candidates who qualify for the award of the Degree having passed
                the examination in all the courses of all the 8 semesters within a maximum
                                                                                   
-                                        25
+                                        25                                        
 
-### Page 26
-
-
-period of 12 consecutive semesters (10 consecutive semesters for Lateral
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+               period of 12 consecutive semesters (10 consecutive semesters for Lateral
                                                                                   
                Entry students, who join the course in the third semester) after his/her
                commencement of study securing a overall CGPA of not less than 5.0,
@@ -1741,12 +1698,14 @@ period of 12 consecutive semesters (10 consecutive semesters for Lateral
                                                                                   
                    This shall be granted by the Institution Management, only once during
                                                                                   
-                                        26
+                                        26                                        
 
-### Page 27
-
-
-the full duration of study, for valid reasons for a maximum of one year
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                   the full duration of study, for valid reasons for a maximum of one year
                    during the entire period of study of the degree programme.     
                                                                                   
                    A candidate is normally not permitted to temporarily break the period of
@@ -1804,12 +1763,15 @@ the full duration of study, for valid reasons for a maximum of one year
                   Campus or in Registered Off Campus recognised Training Centres for a
                                                                                   
                   minimum period of 2weeks.                                      
-                                        27
+                                        27                                        
 
-### Page 28
-
-
- A report on Training undergone by the student, duly attested by the
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                 A report on Training undergone by the student, duly attested by the
                                                                                   
                   Coordinator concerned from the industry / Organisation, in which the
                   student has undergone training and the Head of the Department   
@@ -1866,12 +1828,15 @@ the full duration of study, for valid reasons for a maximum of one year
                                                                                   
                                                                                   
                                                                                   
-                                        28
+                                        28                                        
 
-### Page 29
-
-
-23. Declaration of results:                                           
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+            23. Declaration of results:                                           
                  The end-semester examination results will be declared in institution
                                                                                   
                website and the same is shared with the Head of the Department. In general,

@@ -487,18 +487,17 @@ def process_faq_file(filepath: Path) -> Tuple[List[Dict[str, Any]], Dict[str, An
 def process_all_documents(
     raw_dir: Path = Path("data/raw"),
     processed_dir: Path = Path("data/processed"),
+    chunks_dir: Path = Path("data/chunks"),
     metadata_dir: Path = Path("data/metadata")
 ):
-    """Processes all raw documents and generates cleaned text, chunk JSONs, and catalog."""
+    """Processes all raw documents and generates categorized cleaned text, chunk JSONs, and catalog."""
     raw_dir = Path(raw_dir)
     processed_dir = Path(processed_dir)
+    chunks_dir = Path(chunks_dir)
     metadata_dir = Path(metadata_dir)
 
-    text_out_dir = processed_dir / "text"
-    chunks_out_dir = processed_dir / "chunks"
-
-    text_out_dir.mkdir(parents=True, exist_ok=True)
-    chunks_out_dir.mkdir(parents=True, exist_ok=True)
+    processed_dir.mkdir(parents=True, exist_ok=True)
+    chunks_dir.mkdir(parents=True, exist_ok=True)
     metadata_dir.mkdir(parents=True, exist_ok=True)
 
     catalog_entries = []
@@ -522,7 +521,7 @@ def process_all_documents(
         if file.suffix.lower() == ".json":
             try:
                 chunks, doc_meta = process_faq_file(file)
-                chunks_file = chunks_out_dir / f"{doc_meta['document_id']}_chunks.json"
+                chunks_file = chunks_dir / f"{doc_meta['document_id']}_chunks.json"
                 with open(chunks_file, "w", encoding="utf-8") as f:
                     json.dump(chunks, f, indent=2, ensure_ascii=False)
 
@@ -542,7 +541,7 @@ def process_all_documents(
                 print(f"  [Error] Failed processing FAQ JSON {file.name}: {e}")
                 continue
 
-        # General Document (PDF, DOCX, TXT)
+        # General Document (PDF, DOCX, TXT, HTML)
         try:
             raw_text = DocumentExtractor.extract(file)
             if not raw_text.strip():
@@ -554,8 +553,12 @@ def process_all_documents(
             for item in pii_audit:
                 all_pii_audit.append({"file": file.name, "detail": item})
 
-            # Save cleaned text with YAML-like markdown header
-            cleaned_md_file = text_out_dir / f"{base_meta['document_id']}.md"
+            # Save cleaned text categorized under data/processed/<category_folder>/
+            category_folder = file.parent.name if file.parent.name in ["academics", "exams", "hostels", "placements", "fees", "clubs"] else "general"
+            target_text_dir = processed_dir / category_folder
+            target_text_dir.mkdir(parents=True, exist_ok=True)
+            cleaned_md_file = target_text_dir / f"{base_meta['document_id']}.md"
+
             with open(cleaned_md_file, "w", encoding="utf-8") as f:
                 f.write(f"<!--\nMetadata:\n")
                 f.write(f"  Document ID: {base_meta['document_id']}\n")
@@ -569,7 +572,7 @@ def process_all_documents(
             # Chunk document
             chunks = chunker.chunk_document(cleaned_text, base_meta)
 
-            chunks_file = chunks_out_dir / f"{base_meta['document_id']}_chunks.json"
+            chunks_file = chunks_dir / f"{base_meta['document_id']}_chunks.json"
             with open(chunks_file, "w", encoding="utf-8") as f:
                 json.dump(chunks, f, indent=2, ensure_ascii=False)
 

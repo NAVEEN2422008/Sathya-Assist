@@ -12,77 +12,78 @@ Students often spend hours sifting through WhatsApp forwards, outdated notice bo
 
 ---
 
-## 🏛️ Knowledge Base Architecture
+## 🏛️ Repository Organization
 
 ```text
-data/
-├── raw/                      # Immutable, pristine source documents
-│   ├── academics/            # Academic calendars, working hours, attendance policies
-│   ├── examinations/         # COE regulations, grading scales, arrear rules, revaluation
-│   ├── hostels/              # Gate timings, curfew, dining mess, laundry, campus hospital
-│   ├── finance_fees/         # Tuition deadlines, transport and exam fee schedules
-│   ├── placements/           # CDC criteria, Dream/Super Dream upgrade thresholds
-│   ├── club_events/          # Microsoft Club symposiums, hackathons, workshops
-│   └── faqs_community/       # Crowdsourced WhatsApp queries & senior verified Q&As (JSON)
-│
-├── processed/
-│   ├── text/                 # Cleaned Markdown docs (headers/footers stripped, dates normalized)
-│   └── chunks/               # Chunked JSON vectors enriched with granular metadata
-│
-└── metadata/
-    ├── doc_catalog.csv       # Master provenance registry (file hashes, chunk counts, departments)
-    └── pii_audit_log.jsonl   # Audit log capturing masked student roll numbers / phone numbers
+├── docs/                          # Project specifications & architecture briefs
+│   ├── DATA_ARCHITECTURE.md       # Data engineering standards & RAG spec
+│   └── Sathya Assist – AI_ML Project Brief.pdf
+├── src/                           # Reusable core Python package
+│   └── sathya_assist/             # Config, extractors, cleanings, and chunkers
+├── scripts/                       # Executable CLI workflows
+│   ├── clean_and_chunk.py         # Automated extraction, date normalization & chunking
+│   ├── download_official_docs.py  # Navigation downloader for genuine PDFs & HTML
+│   └── scrape_and_clean.py        # Web scraping, table extraction & manifest logging
+└── data/
+    ├── raw/                       # Immutable authentic official files (PDF & HTML)
+    │   ├── academics/             # UG/PG Regulations PDFs
+    │   ├── exams/                 # COE official examination web portals
+    │   ├── hostels/               # Hostel rules circular PDF, mess & bus routes
+    │   ├── placements/            # CDC recruitment statistics & upgrade policies
+    │   └── fees/                  # Official transcript fee schedules
+    ├── processed/                 # Cleaned Markdown & FAQ documents by category
+    │   ├── academics/
+    │   ├── exams/
+    │   ├── hostels/
+    │   ├── placements/
+    │   ├── fees/
+    │   └── verified_faqs.json     # 16 authentic Q&As mapped to verbatim quotes
+    ├── chunks/                    # Vector-ready chunks with rich metadata
+    └── metadata/                  # Provenance tracking & audit
+        ├── data_manifest.json     # SHA-256 hashes & access timestamps
+        ├── doc_catalog.csv        # Master document catalog
+        └── pii_audit_log.jsonl    # Zero-PII compliance audit log
 ```
 
 ---
 
-## 🔒 Privacy & Compliance (Zero-PII Policy)
-Sathya Assist strictly adheres to student privacy:
-- **Only public or club-approved official circulars** are ingested.
-- **Automated PII scrubbing** strips and redacts student register numbers (e.g., `41XXXX45`), personal email addresses, and personal phone numbers before documents reach the vector database.
-- Private student databases (marks sheets, disciplinary registers, attendance logs) are strictly prohibited.
+## 🔒 Privacy & Compliance (Zero-PII & Zero-Hallucination)
+Sathya Assist strictly adheres to university privacy and factual accuracy:
+- **Zero-Hallucination Directive**: Every fact, rule, and schedule is backed by a verifiable URL and SHA-256 hash in `data/metadata/data_manifest.json`.
+- **Zero-PII Policy**: Automated PII scrubbing masks student register numbers, personal email addresses, and phone numbers before documents reach the vector database.
 
 ---
 
 ## 🚀 Quick Start & Usage
 
-### 1. Prerequisites
-Ensure you have Python 3.10+ installed along with document extraction dependencies:
+### 1. Installation
+Install project dependencies:
 ```bash
-pip install pypdf pdfplumber python-docx
+pip install -r requirements.txt
 ```
 
-### 2. Ingesting New Documents
-1. Place raw official files (`.pdf`, `.docx`, `.txt`, `.json`) into the respective `data/raw/<category>/` directory following our naming convention:
-   ```text
-   [CATEGORY]_[AUTHORITY]_[ACAD_YEAR]_[TOPIC_SLUG]_[DATE_YYYYMMDD].[ext]
-   ```
-   *Examples:*
-   - `ACAD_REGISTRAR_2026-27_ATTENDANCE_AND_SCHEDULE_POLICY_20261101.txt`
-   - `EXAM_COE_2026-27_GRADING_CAE_AND_REVALUATION_RULES_20261101.txt`
-   - `HOSTEL_ADMIN_2026-27_RULES_TIMINGS_AND_AMENITIES_20261101.txt`
-   - `PLACE_CDC_2026-27_ELIGIBILITY_AND_UPGRADE_POLICY_20261101.txt`
+### 2. Ingesting & Verifying Official Documents
+To fetch and update the official circulars and regulations:
+```bash
+python scripts/download_official_docs.py
+```
 
-2. Run the automated data cleaning and chunking pipeline:
-   ```bash
-   python scripts/clean_and_chunk.py
-   ```
+### 3. Cleaning & Generating Vector Chunks
+To clean text, normalize dates, redact PII, and generate chunks with metadata:
+```bash
+python scripts/clean_and_chunk.py
+```
 
-3. The pipeline will automatically:
-   - Extract text and format tables.
-   - Remove recurring university headers/footers and boilerplate.
-   - Normalize Indian academic date formats to ISO-8601 standard (`YYYY-MM-DD`).
-   - Redact personal information (PII).
-   - Generate sliding-window overlapping semantic chunks with full metadata tags.
-   - Update the master catalog at `data/metadata/doc_catalog.csv`.
+Outputs will be populated in:
+- `data/processed/<category>/`: Cleaned Markdown files.
+- `data/chunks/`: Semantic JSON chunks ready for vector embeddings.
+- `data/metadata/doc_catalog.csv`: Updated document catalog.
 
 ---
 
 ## 🤝 Contributing FAQs
-To add common student questions from WhatsApp or senior mentors:
-1. Copy `data/raw/faqs_community/FAQ_BLANK_TEMPLATE.json`.
-2. Add the question, realistic student slang/variations, the factual verified answer, validity date, and search tags.
-3. Re-run `python scripts/clean_and_chunk.py`.
+To add common student questions:
+1. Update [data/processed/verified_faqs.json](file:///c:/Users/Naveen%20S/Documents/mc%20ml/data/processed/verified_faqs.json) ensuring every answer includes an exact `verbatim_excerpt` and `source_document` reference.
 
 ---
 
