@@ -1,0 +1,25 @@
+[
+  {
+    "chunk_id": "FEE_ONLINE_TRANSCRIPTS_AND_CERTIFICATES_2026_c001",
+    "content": "Sathyabama FEE Portal",
+    "metadata": {
+      "source_filename": "FEE_ONLINE_TRANSCRIPTS_AND_CERTIFICATES_2026.html",
+      "document_id": "FEE_ONLINE_TRANSCRIPTS_AND_CERTIFICATES_2026",
+      "category_code": "FEE",
+      "category": "General Information",
+      "department": "ONLINE",
+      "academic_year": "TRANSCRIPTS",
+      "topic": "And Certificates",
+      "publication_date": null,
+      "valid_until": "End of Academic Year",
+      "target_audience": "All Students",
+      "file_hash_sha256": "225bf390a42d986f",
+      "chunk_id": "FEE_ONLINE_TRANSCRIPTS_AND_CERTIFICATES_2026_c001",
+      "chunk_index": 1,
+      "total_chunks": 1,
+      "section_heading": "General Overview",
+      "char_count": 21,
+      "estimated_tokens": 3
+    }
+  }
+]

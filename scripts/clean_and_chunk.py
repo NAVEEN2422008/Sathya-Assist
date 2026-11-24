@@ -150,6 +150,16 @@ class DocumentExtractor:
             return cls.extract_from_docx(filepath)
         elif ext in [".txt", ".md"]:
             return cls.extract_from_txt(filepath)
+        elif ext in [".html", ".htm"]:
+            try:
+                from bs4 import BeautifulSoup
+                with open(filepath, "r", encoding="utf-8", errors="ignore") as f:
+                    soup = BeautifulSoup(f.read(), "html.parser")
+                for s in soup(["script", "style", "nav", "header", "footer"]):
+                    s.decompose()
+                return soup.get_text(separator="\n")
+            except Exception:
+                return cls.extract_from_txt(filepath)
         elif ext == ".json":
             return cls.extract_from_txt(filepath)
         else:
