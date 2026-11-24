@@ -1,0 +1,100 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "document_id": "FAQ_OFFICIAL_2026-27_STUDENT_HANDBOOK_FAQS_20261101",
+  "category": "Student FAQs",
+  "department": "Registrar, COE, Hostel & Placement CDC",
+  "academic_year": "2026-2027",
+  "target_audience": "All Students (UG, PG, Hostelers & Day Scholars)",
+  "faqs": [
+    {
+      "id": "faq_acad_001",
+      "topic": "Attendance Rules and Condonation",
+      "question": "What is the minimum attendance percentage required to write semester exams, and what happens if I am in the 80% to 89% range?",
+      "student_query_variations": [
+        "minimum attendance percentage sathyabama",
+        "attendance required for sem exam",
+        "can i write exam with 85% attendance",
+        "what is condonation fee attendance sathyabama"
+      ],
+      "official_answer": "Sathyabama requires a minimum of 90% attendance in each course to be automatically eligible for End Semester Examinations. If your attendance falls between 80% and 89% due to genuine medical illness or official university on-duty (OD), you may be granted condonation upon Dean approval and payment of the condonation fee. Attendance below 80% strictly disqualifies you from writing the exam and requires repeating the course.",
+      "verified_by": "Official Sathyabama Academic Regulations & Student Handbook 2026-2027",
+      "valid_until": "2027-06-30",
+      "tags": ["attendance", "condonation", "90 percent", "medical leave", "exams", "eligibility"]
+    },
+    {
+      "id": "faq_acad_002",
+      "topic": "College Bus Timings & Late Coaches",
+      "question": "What are the college bus arrival and departure timings for regular days and special training?",
+      "student_query_variations": [
+        "what time do college buses leave sathyabama",
+        "morning bus arrival time",
+        "placement bus timing 5pm",
+        "day scholar bus schedule"
+      ],
+      "official_answer": "The university fleet of 150+ buses arrives before 8:45 AM every morning. On regular instructional days, buses depart campus at 3:30 PM. For students attending placement training, Civil Services Academy, or library study, special evening buses depart at 5:00 PM.",
+      "verified_by": "Sathyabama Transport Facility Circular",
+      "valid_until": "2027-06-30",
+      "tags": ["bus", "transport", "timings", "3:30 pm", "5:00 pm", "day scholar"]
+    },
+    {
+      "id": "faq_exam_002",
+      "topic": "Marks Split and Passing Criteria",
+      "question": "What is the weightage split between Continuous Assessment (CAE) and End Semester Exams, and how many marks are needed to pass?",
+      "student_query_variations": [
+        "cae marks weightage sathyabama",
+        "how are internal marks calculated",
+        "how many marks to pass end sem",
+        "pass mark out of 100 sathyabama"
+      ],
+      "official_answer": "Theory courses are split 50% for Continuous Assessment Exams (CAE 1 and CAE 2) and 50% for the University End Semester Examination. To pass, you must score at least 50% in the End Semester Examination itself, AND achieve at least 50% total aggregate when combining CAE and End Semester marks.",
+      "verified_by": "Controller of Examinations (COE) Evaluation Regulations",
+      "valid_until": "2027-06-30",
+      "tags": ["cae", "internal marks", "pass mark", "50 percent", "coe", "grading"]
+    },
+    {
+      "id": "faq_exam_003",
+      "topic": "Revaluation Deadline & Result Portal",
+      "question": "How long do I have to apply for paper revaluation after results are released, and what is the official results link?",
+      "student_query_variations": [
+        "revaluation last date sathyabama",
+        "how to apply for answer sheet photocopy",
+        "sathyabama results portal link",
+        "exam results website"
+      ],
+      "official_answer": "Students can apply for answer script photocopies and revaluation within 10 days of result publication via the Controller of Examinations. The official examination results portal is https://result.sathyabama.ac.in/.",
+      "verified_by": "Controller of Examinations (COE)",
+      "valid_until": "2027-06-30",
+      "tags": ["revaluation", "photocopy", "results portal", "coe", "arrears"]
+    },
+    {
+      "id": "faq_hostel_003",
+      "topic": "Hostel Gate Timing & Curfew",
+      "question": "What is the curfew time for hostel students to return to campus in the evening?",
+      "student_query_variations": [
+        "hostel in time sathyabama",
+        "gate closing time for hostelers",
+        "what time to return to hostel",
+        "hostel curfew boys girls"
+      ],
+      "official_answer": "All hostel students must return to their respective hostel blocks before 6:30 PM. Movements in and out of campus are recorded using biometric security scanners.",
+      "verified_by": "Hostel Administration & Dean of Student Affairs",
+      "valid_until": "2027-06-30",
+      "tags": ["hostel", "gate timing", "6:30 pm", "curfew", "biometric"]
+    },
+    {
+      "id": "faq_place_002",
+      "topic": "Dream and Super Dream Placement Upgrade Policy",
+      "question": "If I already have a job offer, can I sit for higher CTC Dream or Super Dream companies?",
+      "student_query_variations": [
+        "can i attend placements after getting placed",
+        "dream offer upgrade criteria sathyabama",
+        "super dream company eligibility",
+        "minimum package hike to sit for next company"
+      ],
+      "official_answer": "Yes, under the CDC Upgrade Policy: A student holding an offer up to 5 LPA can attend a Dream Company drive (5 to 10 LPA) only if the new package offers at least a 1.5 LPA hike over the existing CTC. To sit for a Super Dream Company (>10 LPA), the new package must offer at least a 3.0 LPA hike over the current CTC. In all cases, 90% attendance in placement training is mandatory.",
+      "verified_by": "Centre for Career Guidance and Development (CDC)",
+      "valid_until": "2027-06-30",
+      "tags": ["placements", "cdc", "dream offer", "super dream", "upgrade policy", "ctc"]
+    }
+  ]
+}

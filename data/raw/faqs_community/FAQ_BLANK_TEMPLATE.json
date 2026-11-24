@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "document_id": "FAQ_[DEPT_OR_CLUB]_[ACAD_YEAR]_[TOPIC_SLUG]_[YYYYMMDD]",
+  "category": "Student FAQs",
+  "department": "[Department / Subgroup Name]",
+  "academic_year": "2025-2026",
+  "target_audience": "[All Students / Hostelers / Final Year / Freshers]",
+  "faqs": [
+    {
+      "id": "faq_unique_id_001",
+      "topic": "[High-level topic, e.g. Mess Timings / Hall Ticket Issue]",
+      "question": "[Standard clear question statement]",
+      "student_query_variations": [
+        "[How students ask on WhatsApp: variant 1]",
+        "[Short colloquial query: variant 2]",
+        "[Typo / slang variation: variant 3]"
+      ],
+      "official_answer": "[Factual, precise, verified answer. Do NOT guess.]",
+      "verified_by": "[Official circular ref / department officer designation / faculty coordinator]",
+      "valid_until": "YYYY-MM-DD",
+      "tags": ["[tag1]", "[tag2]", "[tag3]"]
+    }
+  ]
+}

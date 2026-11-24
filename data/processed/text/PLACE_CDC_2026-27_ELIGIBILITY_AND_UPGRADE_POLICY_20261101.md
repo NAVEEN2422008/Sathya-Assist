@@ -1,0 +1,33 @@
+<!--
+Metadata:
+  Document ID: PLACE_CDC_2026-27_ELIGIBILITY_AND_UPGRADE_POLICY_20261101
+  Category: Placements & Training
+  Department: CDC
+  Academic Year: 2026-27
+  Publication Date: 2026-11-01
+-->
+
+Centre for Career Guidance and Development (CDC) / Placement Cell
+CAMPUS RECRUITMENT POLICY, ELIGIBILITY CRITERIA & OFFER UPGRADE GUIDELINES
+Academic Session: 2026-2027
+
+1. RECRUITMENT BENCHMARKS & PERFORMANCE SUMMARY
+- Over 497+ recruiting organizations participate annually, including 91+ Core Engineering enterprises.
+- Placement Track Record: 94.51% of registered and eligible students placed (over 4,079 offers secured from 4,316 eligible candidates). Average CTC: 5.73 LPA; Highest domestic CTC: 41.20 LPA to 53.00 LPA.
+- Key Recruiters: Amazon, Adobe, Accenture, Cognizant, Capgemini, Deloitte, Ernst & Young, JP Morgan, IBM, Oracle, PwC, Renault Nissan, Zoho, Bosch, Hyundai Inmobis, Schneider Electric, Siemens, LTIMindtree.
+
+2. STUDENT ELIGIBILITY & TRAINING COMPLIANCE
+- Registration: Final year undergraduate and postgraduate students enrolled in good standing.
+- Mandatory Training Attendance: A strict 90% minimum attendance in campus placement preparation sessions, aptitude workshops, and coding bootcamps is mandatory to remain eligible for corporate drive registrations.
+
+3. COMPANY TIERS & OFFER UPGRADE POLICY
+To ensure fair opportunities for all eligible candidates while encouraging career advancement, CDC enforces the following upgrade thresholds:
+- Regular / Standard Offers: Base recruitment offers up to 5.00 LPA.
+- Dream Companies (5.00 LPA to 10.00 LPA): A student who has already accepted an offer may attend a Dream company drive only if the new offer provides an incremental increase of at least 1.50 LPA above their existing offer.
+- Super Dream Companies (> 10.00 LPA): A student holding an existing offer may attend a Super Dream recruitment process only if the incremental compensation exceeds their current offer by at least 3.00 LPA.
+
+4. CENTRES OF EXCELLENCE (CoE) & INDUSTRY SKILLING
+- Dedicated industry CoEs operational with HCL Tech, Capgemini, Wipro, and Brite Systems.
+- Cognizant Digital Nurture program, Cambridge Business English Certificate (BEC), Cisco CCNA, and Microsoft certifications integrated into curriculum.
+
+Placement Cell Contact: placement.sathyabama.ac.in | placement@sathyabama.ac.in
