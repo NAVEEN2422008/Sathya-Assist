@@ -37,5 +37,6 @@ Thumbs.db
 *.log
 .secrets/
 
-# Local vector store (generated via src/pipeline/ingest.py)
+# Local vector store & runtime feedback logs
 data/chroma_db/
+data/metadata/feedback.jsonl

@@ -72,3 +72,11 @@ Mandatory incident log for all engineering defects, chunking flaws, retrieval mi
 - **Root Cause Analysis**: `all-MiniLM-L6-v2` cosine similarity for arbitrary English queries against 86 chunks routinely exceeds `0.28`.
 - **Corrective Action / Fix Implemented**: **RESOLVED.** Raised `min_score` to `0.40` and added explicit out-of-scope / code-generation / live-timetable guards in `src/pipeline/rag_chain.py`. Guardrail Pass Rate reached `100.0%` (`10/10`).
 - **Prevention Rule**: Combine calibrated vector score thresholds (`>= 0.40`) with explicit scope-boundary rules for non-campus and live personal queries.
+
+- **Incident ID**: INC-008
+- **Detecting Agent**: Real-User Browser QA (`ec5088b4`)
+- **Responsible Agent**: Vikram (Full-Stack Integration & API Engineer)
+- **The Mistake / Failure Mode**: Live browser QA on `http://127.0.0.1:8000/widget/index.html` surfaced: (1) citation pill `href`s had trailing text like ` and Circular Rule 2` / ` (Rule 1)` creating broken links; (2) `.sa-quick-chips` overflowed horizontally clipping `"Placements"`; (3) raw `[Source: ...]` duplicated the pills, long IDs wrapped mid-word, and fallback URLs were plain text.
+- **Root Cause Analysis**: `widget.js` assigned raw `c.reference` directly to `href` without URL extraction, rendered raw `[Source: ...]` text above the pills, and `widget.css` used `overflow-x: auto` without `flex-wrap: wrap`.
+- **Corrective Action / Fix Implemented**: **RESOLVED.** Updated `frontend/widget.js` (`extractCleanUrl`, `formatBotText` with XSS-safe HTML escaping and URL linkification, pill deduplication) and `frontend/widget.css` (`flex-wrap: wrap` on `.sa-quick-chips`, `text-overflow: ellipsis` on `.sa-cite-pill`).
+- **Prevention Rule**: Always sanitize/extract clean `https?://` URLs before assigning `href` in frontend components, and verify widget rendering in a real browser viewport.

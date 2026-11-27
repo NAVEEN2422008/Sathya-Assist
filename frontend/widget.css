@@ -101,13 +101,20 @@
 }
 
 .sa-msg {
-  max-width: 86%;
+  max-width: 88%;
   padding: 10px 13px;
   border-radius: 12px;
   font-size: 13.5px;
   line-height: 1.45;
   white-space: pre-wrap;
-  word-break: break-word;
+  overflow-wrap: break-word;
+  word-break: normal;
+}
+
+.sa-msg a {
+  color: var(--sa-accent);
+  text-decoration: underline;
+  word-break: break-all;
 }
 
 .sa-msg.user {
@@ -137,10 +144,14 @@
   font-size: 11px;
   background: #eef2ff;
   color: #1e40af;
-  padding: 2px 8px;
+  padding: 3px 9px;
   border-radius: 999px;
   text-decoration: none;
   border: 1px solid #c7d2fe;
+  max-width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .sa-feedback-row {
@@ -171,8 +182,8 @@
   background: #fff;
   border-top: 1px solid var(--sa-border);
   display: flex;
+  flex-wrap: wrap;
   gap: 6px;
-  overflow-x: auto;
 }
 
 .sa-chip {

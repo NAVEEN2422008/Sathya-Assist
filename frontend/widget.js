@@ -59,21 +59,61 @@
     });
   });
 
+  function escapeHtml(str) {
+    return str
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;");
+  }
+
+  function formatBotText(text, hasCitations) {
+    let cleaned = text;
+    if (hasCitations) {
+      cleaned = cleaned.replace(/\s*\[Source:\s*[^\]]+\]\s*$/i, "").trim();
+    }
+    const escaped = escapeHtml(cleaned);
+    return escaped.replace(/(https?:\/\/[^\s<]+)/g, (url) => {
+      const cleanUrl = url.replace(/[.,;)]+$/, "");
+      const suffix = url.slice(cleanUrl.length);
+      return `<a href="${cleanUrl}" target="_blank" rel="noopener noreferrer">${cleanUrl}</a>${suffix}`;
+    });
+  }
+
+  function extractCleanUrl(ref) {
+    if (!ref) return null;
+    const match = ref.match(/https?:\/\/[^\s)]+/);
+    return match ? match[0].replace(/[.,;]+$/, "") : null;
+  }
+
   function appendMessage(text, sender, citations = [], queryText = "") {
     const msg = document.createElement("div");
     msg.className = `sa-msg ${sender}`;
-    msg.textContent = text;
+
+    if (sender === "bot") {
+      const bodyEl = document.createElement("div");
+      bodyEl.innerHTML = formatBotText(text, citations.length > 0);
+      msg.appendChild(bodyEl);
+    } else {
+      msg.textContent = text;
+    }
 
     if (sender === "bot" && citations.length > 0) {
       const citeBox = document.createElement("div");
       citeBox.className = "sa-citations";
+      const seenUrls = new Set();
       citations.forEach((c) => {
-        const isUrl = c.reference && c.reference.startsWith("http");
-        const pill = document.createElement(isUrl ? "a" : "span");
+        const cleanUrl = extractCleanUrl(c.reference);
+        const dedupeKey = cleanUrl || c.document_id;
+        if (seenUrls.has(dedupeKey)) return;
+        seenUrls.add(dedupeKey);
+
+        const pill = document.createElement(cleanUrl ? "a" : "span");
         pill.className = "sa-cite-pill";
-        pill.textContent = c.document_id;
-        if (isUrl) {
-          pill.href = c.reference;
+        pill.textContent = c.document_id.replace(/_/g, " ");
+        pill.title = cleanUrl || c.reference || c.document_id;
+        if (cleanUrl) {
+          pill.href = cleanUrl;
           pill.target = "_blank";
           pill.rel = "noopener noreferrer";
         }
