@@ -1,25 +1,52 @@
 [
   {
     "chunk_id": "FEE_ONLINE_TRANSCRIPTS_AND_CERTIFICATES_2026_c001",
-    "content": "Sathyabama FEE Portal",
+    "content": "# Online Certificate & Transcript Fee Structure\n\nSource: Sathyabama FEE Portal (https://feeportal.sathyabama.ac.in/account/Certificate)\n\n## Prescribed Fee Schedule\n\n| Sl. No. | Document / Service | Official Amount |\n| :--- | :--- | :--- |\n| 1. | Semester Mark / Grade Sheet for all courses | Rs. 400/- per semester |\n| 2. | Consolidated Mark / Grade Sheet for all courses | Rs. 800/- |\n| 3. | Speed Post Postal Charges (within India) | Rs. 200/- |\n\n## Official Processing Guidelines & Dispatch Policies\n1. Turnaround Time: Maximum of 15 working days from the date of receipt of the application form at the Controller of Examinations office.\n2. Degree & Transfer Certificates: Transcripts will NOT be issued for Transfer Certificates and Degree Certificates.\n3. Attestation Rules: Attestation of grade sheets is NOT conducted by the COE office; attestation is reserved for original Transfer Certificates and Degree Certificates.\n4. Postal Dispatch: All processed transcripts are dispatched strictly via Speed Post within India.",
     "metadata": {
       "source_filename": "FEE_ONLINE_TRANSCRIPTS_AND_CERTIFICATES_2026.html",
       "document_id": "FEE_ONLINE_TRANSCRIPTS_AND_CERTIFICATES_2026",
       "category_code": "FEE",
-      "category": "General Information",
-      "department": "ONLINE",
-      "academic_year": "TRANSCRIPTS",
-      "topic": "And Certificates",
-      "publication_date": null,
+      "category": "Fees & Finance",
+      "department": "Finance & Controller of Examinations (1800-425-1770)",
+      "academic_year": "2026-2027",
+      "topic": "Official Fee Structure for Transcripts, Grade Sheets and Postal Dispatches",
+      "publication_date": "2026-11-24",
       "valid_until": "End of Academic Year",
       "target_audience": "All Students",
+      "source_url": "https://feeportal.sathyabama.ac.in/account/Certificate",
+      "source_title": "Official Fee Structure for Transcripts, Grade Sheets and Postal Dispatches",
       "file_hash_sha256": "225bf390a42d986f",
       "chunk_id": "FEE_ONLINE_TRANSCRIPTS_AND_CERTIFICATES_2026_c001",
       "chunk_index": 1,
-      "total_chunks": 1,
-      "section_heading": "General Overview",
-      "char_count": 21,
-      "estimated_tokens": 3
+      "total_chunks": 2,
+      "section_heading": "General Tuition & Hostel Fees Status\nNote: Sathyabama Institute of Science and Technology does not publish public open tables for general tuition or hostel fees. General fee balances are accessed individually through authenticated student ERP login portals (https://feeportal.sathyabama.ac.in/account/login) using Student Register Number and Date of Birth.\nToll-Free Helpline: 1800 - 425 - 1770",
+      "char_count": 1026,
+      "estimated_tokens": 211
+    }
+  },
+  {
+    "chunk_id": "FEE_ONLINE_TRANSCRIPTS_AND_CERTIFICATES_2026_c002",
+    "content": "y the COE office; attestation is reserved for original Transfer Certificates and Degree Certificates.\n4. Postal Dispatch: All processed transcripts are dispatched strictly via Speed Post within India.\n\n## General Tuition & Hostel Fees Status\nNote: Sathyabama Institute of Science and Technology does not publish public open tables for general tuition or hostel fees. General fee balances are accessed individually through authenticated student ERP login portals (https://feeportal.sathyabama.ac.in/account/login) using Student Register Number and Date of Birth.\nToll-Free Helpline: 1800 - 425 - 1770",
+    "metadata": {
+      "source_filename": "FEE_ONLINE_TRANSCRIPTS_AND_CERTIFICATES_2026.html",
+      "document_id": "FEE_ONLINE_TRANSCRIPTS_AND_CERTIFICATES_2026",
+      "category_code": "FEE",
+      "category": "Fees & Finance",
+      "department": "Finance & Controller of Examinations (1800-425-1770)",
+      "academic_year": "2026-2027",
+      "topic": "Official Fee Structure for Transcripts, Grade Sheets and Postal Dispatches",
+      "publication_date": "2026-11-24",
+      "valid_until": "End of Academic Year",
+      "target_audience": "All Students",
+      "source_url": "https://feeportal.sathyabama.ac.in/account/Certificate",
+      "source_title": "Official Fee Structure for Transcripts, Grade Sheets and Postal Dispatches",
+      "file_hash_sha256": "225bf390a42d986f",
+      "chunk_id": "FEE_ONLINE_TRANSCRIPTS_AND_CERTIFICATES_2026_c002",
+      "chunk_index": 2,
+      "total_chunks": 2,
+      "section_heading": "General Tuition & Hostel Fees Status\nNote: Sathyabama Institute of Science and Technology does not publish public open tables for general tuition or hostel fees. General fee balances are accessed individually through authenticated student ERP login portals (https://feeportal.sathyabama.ac.in/account/login) using Student Register Number and Date of Birth.\nToll-Free Helpline: 1800 - 425 - 1770",
+      "char_count": 599,
+      "estimated_tokens": 106
     }
   }
 ]

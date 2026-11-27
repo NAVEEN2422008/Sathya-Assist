@@ -36,3 +36,6 @@ Thumbs.db
 # Sensitive local logs or credentials
 *.log
 .secrets/
+
+# Local vector store (generated via src/pipeline/ingest.py)
+data/chroma_db/

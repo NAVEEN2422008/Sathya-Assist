@@ -1,0 +1,79 @@
+{
+  "total_cases": 55,
+  "factual_cases": 45,
+  "redteam_cases": 10,
+  "retrieval_recall_at_k": 100.0,
+  "faithfulness_accuracy": 91.11,
+  "citation_accuracy": 100.0,
+  "guardrail_pass_rate": 100.0,
+  "overall_accuracy": 92.73,
+  "mean_latency_ms": 115.82,
+  "p95_latency_ms": 150.81,
+  "failures_count": 4,
+  "failures": [
+    {
+      "id": "acad_08",
+      "category": "Academics",
+      "query": "What is the normal duration of a B.Sc. programme?",
+      "recall_ok": true,
+      "cite_ok": true,
+      "faithful_ok": false,
+      "expected_keywords": [
+        "6 semesters"
+      ],
+      "retrieved_docs": [
+        "ACAD_UG_BE_BTECH_REGULATIONS",
+        "EXAM_COE_OFFICIAL_REGULATIONS_2026"
+      ],
+      "answer_preview": "The normal duration is 8 semesters (4 years). The maximum permissible period is an extra 4 semesters beyond the normal duration (total 12 semesters / 6 years). [Source: ACAD_UG_BE_BTECH_REGULATIONS | https://www.sathyabama.ac.in/academics/examination"
+    },
+    {
+      "id": "hostel_12",
+      "category": "Hostels",
+      "query": "How many buses does Sathyabama operate for day scholars?",
+      "recall_ok": true,
+      "cite_ok": true,
+      "faithful_ok": false,
+      "expected_keywords": [
+        "150"
+      ],
+      "retrieved_docs": [
+        "TRANSPORT_OFFICIAL_BUS_SCHEDULE_2026",
+        "HOSTEL_OFFICIAL_RULES_AND_REGULATIONS_CIRCULAR"
+      ],
+      "answer_preview": "Based on official university records:\n\nQuestion: What are the standard bus arrival and departure timings for day scholars?\nAmple numbers of buses are operated every day and hassle free journey is an experience of people travel to the campus.\nSafety a"
+    },
+    {
+      "id": "place_05",
+      "category": "Placements",
+      "query": "What was the placement percentage and average CTC in 2024-25?",
+      "recall_ok": true,
+      "cite_ok": true,
+      "faithful_ok": false,
+      "expected_keywords": [
+        "94.34",
+        "5.57"
+      ],
+      "retrieved_docs": [
+        "PLACE_CDC_OFFICIAL_STATISTICS_POLICY_2026"
+      ],
+      "answer_preview": "Based on official university records:\n\n| Description/Year | 2021-22 | 2022-23 | 2023-24 | 2024-25 | 2024-25 |\n| Description/Year | 2021-22 | 2022-23 | 2023-24 | 2024-2025 | 2025-2026 |\n| Average package (in Rupees) | 4,80,000 | 5,40,000 | 5,50,000 | "
+    },
+    {
+      "id": "place_07",
+      "category": "Placements",
+      "query": "How many companies visited Sathyabama in 2025-26?",
+      "recall_ok": true,
+      "cite_ok": true,
+      "faithful_ok": false,
+      "expected_keywords": [
+        "497"
+      ],
+      "retrieved_docs": [
+        "ACAD_UG_BE_BTECH_REGULATIONS",
+        "PLACE_CDC_OFFICIAL_STATISTICS_POLICY_2026"
+      ],
+      "answer_preview": "Based on official university records:\n\n| Description / Year | 2021-22 | 2022-23 | 2023-24 | 2024-25 | 2025-26 |\nQuestion: How many working days or instructional hours make up a semester at Sathyabama?\nInternship Companies:\n| List of Internship Compan"
+    }
+  ]
+}

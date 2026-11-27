@@ -2,9 +2,9 @@
 Metadata:
   Document ID: ACAD_PG_ME_MTECH_REGULATIONS
   Category: Academics
-  Department: PG
-  Academic Year: ME
-  Publication Date: None
+  Department: Dean Academics & Academic Council
+  Academic Year: 2026-2027
+  Publication Date: 2026-11-24
 -->
 
 SATHYABAMA                                             

@@ -2,9 +2,9 @@
 Metadata:
   Document ID: HOSTEL_OFFICIAL_RULES_AND_REGULATIONS_CIRCULAR
   Category: Hostel Life
-  Department: OFFICIAL
-  Academic Year: RULES
-  Publication Date: None
+  Department: Hostel Administration & Wardens Office (044-24503150)
+  Academic Year: 2026-2027
+  Publication Date: 2026-11-24
 -->
 
 Hostel    Rules   &                              IIINNNSSSTTTIIITTTUUUTTTEEE OOOFFF SSSCCCIIIEEENNNCCCEEE AAANNNDDD TTTEEECCCHHHNNNOOOLLLOOOGGGYYY

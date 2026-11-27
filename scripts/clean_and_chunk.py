@@ -59,15 +59,23 @@ PII_PHONE_PATTERN = r"(?:\+91[\-\s]?)?[6-9]\d{9}\b"
 PII_STUDENT_EMAIL_PATTERN = r"\b[34]\d{7}@sathyabama\.ac\.in\b"
 PII_GENERIC_PERSONAL_EMAIL = r"\b[A-Za-z0-9._%+-]+@(?!sathyabama\.ac\.in|microsoft\.com)[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b"
 
-# Category mapping lookup from file prefix
+# Category mapping lookup from file prefix or manifest category
 CATEGORY_MAP = {
     "ACAD": "Academics",
     "EXAM": "Examinations",
     "HOSTEL": "Hostel Life",
+    "TRANSPORT": "Transport & Bus",
     "FEES": "Fees & Finance",
+    "FEE": "Fees & Finance",
     "PLACE": "Placements & Training",
     "CLUB": "Club Events",
-    "FAQ": "Student FAQs"
+    "FAQ": "Student FAQs",
+    "academics": "Academics",
+    "exams": "Examinations",
+    "hostels": "Hostel Life",
+    "fees": "Fees & Finance",
+    "placements": "Placements & Training",
+    "clubs": "Club Events",
 }
 
 
@@ -155,9 +163,30 @@ class DocumentExtractor:
                 from bs4 import BeautifulSoup
                 with open(filepath, "r", encoding="utf-8", errors="ignore") as f:
                     soup = BeautifulSoup(f.read(), "html.parser")
-                for s in soup(["script", "style", "nav", "header", "footer"]):
+                for s in soup(["script", "style", "nav", "header", "footer", "aside", "form"]):
                     s.decompose()
-                return soup.get_text(separator="\n")
+                container = (
+                    soup.find("main")
+                    or soup.find("article")
+                    or soup.find("div", class_=re.compile(r"content|field-item|region-content|main-content", re.I))
+                    or soup.body
+                    or soup
+                )
+                for table in container.find_all("table"):
+                    rows = table.find_all("tr")
+                    if not rows:
+                        continue
+                    md_table = []
+                    headers = [th.get_text(strip=True).replace("\n", " ") for th in rows[0].find_all(["th", "td"])]
+                    if headers:
+                        md_table.append("| " + " | ".join(headers) + " |")
+                        md_table.append("| " + " | ".join(["---"] * len(headers)) + " |")
+                        for r in rows[1:]:
+                            cells = [td.get_text(strip=True).replace("\n", " ") for td in r.find_all(["td", "th"])]
+                            if any(cells):
+                                md_table.append("| " + " | ".join(cells) + " |")
+                        table.replace_with(soup.new_string("\n\n" + "\n".join(md_table) + "\n\n"))
+                return container.get_text(separator="\n")
             except Exception:
                 return cls.extract_from_txt(filepath)
         elif ext == ".json":
@@ -293,13 +322,32 @@ class TextCleaner:
 # -----------------------------------------------------------------------------
 
 class MetadataExtractor:
-    """Parses standardized filename conventions and document contents into rich metadata."""
+    """Loads authoritative metadata from data_manifest.json with filename fallback."""
 
-    @staticmethod
-    def parse_filename(filepath: Path) -> Dict[str, Any]:
+    _manifest_cache: Optional[Dict[str, Dict[str, Any]]] = None
+
+    @classmethod
+    def _load_manifest_index(cls, manifest_path: Path = Path("data/metadata/data_manifest.json")) -> Dict[str, Dict[str, Any]]:
+        if cls._manifest_cache is not None:
+            return cls._manifest_cache
+        cls._manifest_cache = {}
+        if manifest_path.exists():
+            try:
+                with open(manifest_path, "r", encoding="utf-8") as f:
+                    data = json.load(f)
+                for doc in data.get("documents", []):
+                    doc_id = doc.get("document_id")
+                    if doc_id:
+                        cls._manifest_cache[doc_id] = doc
+            except Exception as e:
+                print(f"[Warning] Could not read manifest {manifest_path}: {e}")
+        return cls._manifest_cache
+
+    @classmethod
+    def parse_filename(cls, filepath: Path) -> Dict[str, Any]:
         """
-        Parses convention: [CATEGORY]_[AUTHORITY]_[ACAD_YEAR]_[TOPIC_SLUG]_[DATE_YYYYMMDD].[ext]
-        Example: EXAM_COE_2025-26_END_SEM_REGULATIONS_20251110.pdf
+        Resolves metadata from data_manifest.json first; falls back to filename convention:
+        [CATEGORY]_[AUTHORITY]_[ACAD_YEAR]_[TOPIC_SLUG]_[DATE_YYYYMMDD].[ext]
         """
         stem = filepath.stem
         tokens = stem.split("_")
@@ -307,17 +355,32 @@ class MetadataExtractor:
         meta = {
             "source_filename": filepath.name,
             "document_id": stem,
-            "category_code": "GENERAL",
-            "category": "General Information",
+            "category_code": tokens[0].upper() if tokens else "GENERAL",
+            "category": CATEGORY_MAP.get(tokens[0].upper(), "General Information") if tokens else "General Information",
             "department": "Campus Administration",
-            "academic_year": "2025-2026",
+            "academic_year": "2026-2027",
             "topic": stem.replace("_", " ").title(),
             "publication_date": None,
             "valid_until": "End of Academic Year",
-            "target_audience": "All Students"
+            "target_audience": "All Students",
+            "source_url": None,
+            "source_title": stem.replace("_", " ").title(),
         }
 
-        if len(tokens) >= 5:
+        manifest_index = cls._load_manifest_index()
+        if stem in manifest_index:
+            m = manifest_index[stem]
+            raw_cat = m.get("category", "")
+            meta["category"] = CATEGORY_MAP.get(raw_cat, raw_cat.title() if raw_cat else meta["category"])
+            meta["department"] = m.get("official_contact_office", meta["department"])
+            meta["academic_year"] = m.get("applicable_academic_year", meta["academic_year"])
+            meta["source_url"] = m.get("source_url")
+            meta["source_title"] = m.get("source_title", meta["source_title"])
+            meta["topic"] = m.get("source_title", meta["topic"])
+            ts = m.get("access_timestamp")
+            if ts:
+                meta["publication_date"] = ts[:10]
+        elif len(tokens) >= 5 and re.match(r"^\d{4}-\d{2,4}$", tokens[2]):
             cat_code = tokens[0].upper()
             dept_code = tokens[1].upper()
             acad_yr = tokens[2]
@@ -330,7 +393,6 @@ class MetadataExtractor:
             meta["academic_year"] = acad_yr
             meta["topic"] = topic
 
-            # Parse date YYYYMMDD
             if re.match(r"^\d{8}$", date_str):
                 try:
                     dt = datetime.strptime(date_str, "%Y%m%d")
@@ -544,10 +606,6 @@ def process_all_documents(
         # General Document (PDF, DOCX, TXT, HTML)
         try:
             raw_text = DocumentExtractor.extract(file)
-            if not raw_text.strip():
-                print(f"  [Warning] Extracted text is empty for {file.name}. Skipping.")
-                continue
-
             cleaned_text, pii_audit = TextCleaner.clean(raw_text)
 
             for item in pii_audit:
@@ -559,15 +617,24 @@ def process_all_documents(
             target_text_dir.mkdir(parents=True, exist_ok=True)
             cleaned_md_file = target_text_dir / f"{base_meta['document_id']}.md"
 
-            with open(cleaned_md_file, "w", encoding="utf-8") as f:
-                f.write(f"<!--\nMetadata:\n")
-                f.write(f"  Document ID: {base_meta['document_id']}\n")
-                f.write(f"  Category: {base_meta['category']}\n")
-                f.write(f"  Department: {base_meta['department']}\n")
-                f.write(f"  Academic Year: {base_meta['academic_year']}\n")
-                f.write(f"  Publication Date: {base_meta['publication_date']}\n")
-                f.write(f"-->\n\n")
-                f.write(cleaned_text)
+            # If raw extraction is minimal (e.g., JS-rendered SPA shell) and a verified processed .md exists, use it
+            if len(cleaned_text.strip()) < 100 and cleaned_md_file.exists():
+                existing_md = cleaned_md_file.read_text(encoding="utf-8")
+                cleaned_text = re.sub(r"^---\n.*?\n---\n+", "", existing_md, flags=re.DOTALL).strip()
+                print(f"  -> Preserved verified SPA content from {cleaned_md_file.name}")
+            elif not cleaned_text.strip():
+                print(f"  [Warning] Extracted text is empty for {file.name}. Skipping.")
+                continue
+            else:
+                with open(cleaned_md_file, "w", encoding="utf-8") as f:
+                    f.write(f"<!--\nMetadata:\n")
+                    f.write(f"  Document ID: {base_meta['document_id']}\n")
+                    f.write(f"  Category: {base_meta['category']}\n")
+                    f.write(f"  Department: {base_meta['department']}\n")
+                    f.write(f"  Academic Year: {base_meta['academic_year']}\n")
+                    f.write(f"  Publication Date: {base_meta['publication_date']}\n")
+                    f.write(f"-->\n\n")
+                    f.write(cleaned_text)
 
             # Chunk document
             chunks = chunker.chunk_document(cleaned_text, base_meta)
