@@ -47,7 +47,7 @@ This repository contains the primary document knowledge base, data cleaning engi
 
 ---
 
-## 3. Provenance & Zero-Hallucination Directives
-- **Authenticity Standard**: Only active, public circulars and official webpages from `sathyabama.ac.in` and `feeportal.sathyabama.ac.in` are permitted.
-- **Verification Guarantee**: Every document has an entry in `data/metadata/data_manifest.json` featuring its SHA-256 hash, official contact department, and exact access URL.
-- **Zero-PII**: All student register numbers, personal emails, and phone numbers are redacted.
+## 3. Provenance & Data Verification
+- **Source Policy**: Only public circulars and official webpages from `sathyabama.ac.in` and `feeportal.sathyabama.ac.in` are ingested.
+- **Verification**: Every document has an entry in `data/metadata/data_manifest.json` with its SHA-256 hash, official contact department, and source URL.
+- **Privacy**: All student register numbers, personal emails, and phone numbers are redacted before indexing.

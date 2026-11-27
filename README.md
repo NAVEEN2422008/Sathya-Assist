@@ -1,94 +1,76 @@
-# Sathya Assist 🤖🎓
+# Sathya Assist
 
-> **An AI Campus Companion for Sathyabama Students**  
-> Built with ❤️ by the **Microsoft Club (AI/ML Subgroup)** at **Sathyabama Institute of Science and Technology**.
+Campus Q&A assistant for Sathyabama Institute of Science and Technology students, built by the Microsoft Club (AI/ML Subgroup).
 
----
+## Overview
 
-## 📌 Project Overview
-Students often spend hours sifting through WhatsApp forwards, outdated notice boards, and scattered university circulars to find basic answers about exams, hostel rules, academic schedules, and placement requirements.
+**Sathya Assist** uses Retrieval-Augmented Generation (RAG) to answer student questions about exams, hostel rules, academic regulations, transport, and placements using official university circulars and verified FAQs.
 
-**Sathya Assist** is an AI chatbot powered by Retrieval-Augmented Generation (RAG). It provides accurate, source-grounded answers to student queries directly from official campus circulars, handbooks, and verified community FAQs.
-
----
-
-## 🏛️ Repository Organization
+## Repository Structure
 
 ```text
-├── docs/                          # Project specifications & architecture briefs
-│   ├── DATA_ARCHITECTURE.md       # Data engineering standards & RAG spec
+├── docs/                          # Project brief and data architecture docs
+│   ├── DATA_ARCHITECTURE.md
 │   └── Sathya Assist – AI_ML Project Brief.pdf
-├── src/                           # Reusable core Python package
-│   └── sathya_assist/             # Config, extractors, cleanings, and chunkers
-├── scripts/                       # Executable CLI workflows
-│   ├── clean_and_chunk.py         # Automated extraction, date normalization & chunking
-│   ├── download_official_docs.py  # Navigation downloader for genuine PDFs & HTML
-│   └── scrape_and_clean.py        # Web scraping, table extraction & manifest logging
+├── src/
+│   └── sathya_assist/             # Shared configuration and constants
+├── scripts/                       # Data ingestion, cleaning, and chunking scripts
+│   ├── clean_and_chunk.py         # Text extraction, date normalization, PII redaction, chunking
+│   ├── download_official_docs.py  # Batch downloader for official PDFs and pages
+│   └── scrape_and_clean.py        # HTML/PDF parser and manifest updater
 └── data/
-    ├── raw/                       # Immutable authentic official files (PDF & HTML)
-    │   ├── academics/             # UG/PG Regulations PDFs
-    │   ├── exams/                 # COE official examination web portals
-    │   ├── hostels/               # Hostel rules circular PDF, mess & bus routes
-    │   ├── placements/            # CDC recruitment statistics & upgrade policies
-    │   └── fees/                  # Official transcript fee schedules
-    ├── processed/                 # Cleaned Markdown & FAQ documents by category
+    ├── raw/                       # Source PDFs and HTML snapshots by category
+    │   ├── academics/
+    │   ├── exams/
+    │   ├── hostels/
+    │   ├── placements/
+    │   └── fees/
+    ├── processed/                 # Cleaned Markdown files and verified FAQs
     │   ├── academics/
     │   ├── exams/
     │   ├── hostels/
     │   ├── placements/
     │   ├── fees/
-    │   └── verified_faqs.json     # 16 authentic Q&As mapped to verbatim quotes
-    ├── chunks/                    # Vector-ready chunks with rich metadata
-    └── metadata/                  # Provenance tracking & audit
-        ├── data_manifest.json     # SHA-256 hashes & access timestamps
-        ├── doc_catalog.csv        # Master document catalog
-        └── pii_audit_log.jsonl    # Zero-PII compliance audit log
+    │   └── verified_faqs.json
+    ├── chunks/                    # Chunked JSON files with metadata for vector indexing
+    └── metadata/                  # Provenance and catalog files
+        ├── data_manifest.json
+        └── doc_catalog.csv
 ```
 
----
+## Data Privacy & Source Verification
 
-## 🔒 Privacy & Compliance (Zero-PII & Zero-Hallucination)
-Sathya Assist strictly adheres to university privacy and factual accuracy:
-- **Zero-Hallucination Directive**: Every fact, rule, and schedule is backed by a verifiable URL and SHA-256 hash in `data/metadata/data_manifest.json`.
-- **Zero-PII Policy**: Automated PII scrubbing masks student register numbers, personal email addresses, and phone numbers before documents reach the vector database.
+- **Official Sources Only**: Documents are sourced from public pages and circulars on `sathyabama.ac.in` and `feeportal.sathyabama.ac.in`, tracked with SHA-256 checksums in `data/metadata/data_manifest.json`.
+- **No Student PII**: The cleaning pipeline redacts student register numbers, personal email addresses, and phone numbers before chunking.
 
----
+## Quick Start
 
-## 🚀 Quick Start & Usage
-
-### 1. Installation
-Install project dependencies:
+### 1. Install Dependencies
 ```bash
 pip install -r requirements.txt
 ```
 
-### 2. Ingesting & Verifying Official Documents
-To fetch and update the official circulars and regulations:
+### 2. Fetch Official Documents
 ```bash
 python scripts/download_official_docs.py
 ```
 
-### 3. Cleaning & Generating Vector Chunks
-To clean text, normalize dates, redact PII, and generate chunks with metadata:
+### 3. Clean & Chunk Documents
 ```bash
 python scripts/clean_and_chunk.py
 ```
 
-Outputs will be populated in:
+This generates:
 - `data/processed/<category>/`: Cleaned Markdown files.
-- `data/chunks/`: Semantic JSON chunks ready for vector embeddings.
+- `data/chunks/`: Semantic JSON chunks with metadata.
 - `data/metadata/doc_catalog.csv`: Updated document catalog.
 
----
+## Contributing FAQs
 
-## 🤝 Contributing FAQs
-To add common student questions:
-1. Update [data/processed/verified_faqs.json](file:///c:/Users/Naveen%20S/Documents/mc%20ml/data/processed/verified_faqs.json) ensuring every answer includes an exact `verbatim_excerpt` and `source_document` reference.
+Add entries to `data/processed/verified_faqs.json` with a `verbatim_excerpt` and `source_document` reference from an official circular or university page.
 
----
+## Team
 
-## 👥 Team
-- **AI/ML Subgroup**: Data Engineering, RAG Pipeline, Prompt Engineering, Evaluation.
-- **Web & App Development**: Official chat widget and platform integration.
-- **Cloud & DevOps**: Azure deployment and vector database management.
-- **Microsoft Club, Sathyabama Institute of Science and Technology**.
+- **AI/ML Subgroup**: Data Engineering, RAG Pipeline, Prompt Engineering, Evaluation
+- **Web & App Development**: Chat widget and platform integration
+- **Cloud & DevOps**: Azure deployment and vector store hosting

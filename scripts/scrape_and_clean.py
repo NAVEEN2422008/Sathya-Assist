@@ -1,11 +1,10 @@
 """
-Sathya Assist - Official Data Scraping, Verification & Cleaning Engine
+Sathya Assist - Official Data Scraping & Cleaning Engine
 Microsoft Club, Sathyabama Institute of Science and Technology
 
-ZERO-HALLUCINATION DIRECTIVE:
-Fetches ONLY genuine, verifiable data from official Sathyabama domains (sathyabama.ac.in),
-calculates SHA-256 provenance hashes, extracts structured text/tables, and logs full metadata
-to data/data_manifest.json.
+Fetches public documents from official Sathyabama domains (sathyabama.ac.in),
+computes SHA-256 checksums, extracts structured text/tables, and logs metadata
+to data/metadata/data_manifest.json.
 """
 
 import os
@@ -41,7 +40,7 @@ DEFAULT_HEADERS = {
     "Accept-Language": "en-US,en;q=0.5",
 }
 
-MANIFEST_PATH = Path("data/data_manifest.json")
+MANIFEST_PATH = Path("data/metadata/data_manifest.json")
 
 
 def compute_sha256(filepath: Path) -> str:
@@ -203,7 +202,7 @@ def fetch_and_process_url(
     """
     parsed = urlparse(url)
     if "sathyabama.ac.in" not in parsed.netloc:
-        raise ValueError(f"Strict Security Directive: Only sathyabama.ac.in URLs are permitted. Given: {url}")
+        raise ValueError(f"Only sathyabama.ac.in URLs are permitted. Given: {url}")
 
     raw_cat_dir = Path("data/raw") / category
     proc_cat_dir = Path("data/processed") / category
